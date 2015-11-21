@@ -3,5 +3,7 @@
     $elements = explode('","', substr($navbar, strpos($navbar, " var classes = ")+17, strpos($navbar, "var rooms = ") - (strpos($navbar, " var classes = ")+17)-6));
 
     $result->elements = $elements;
+    $result->success = 1;
+    $result->message = "";
     echo json_encode($result);
 ?>

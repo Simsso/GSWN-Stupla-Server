@@ -12,5 +12,7 @@
     array_splice($weeks, 0, 1);
 
     $result->weeks = $weeks;
+    $result->success = 1;
+    $result->message = "";
     echo json_encode($result);
 ?>

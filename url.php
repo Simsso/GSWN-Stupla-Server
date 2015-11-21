@@ -11,5 +11,7 @@
     }
 
     $result->url = 'http://stupla.gswn.de/schueler/' . $_GET['week'] . '/c/c' . $element_id_str . '.htm';
+    $result->success = 1;
+    $result->message = "";
     echo json_encode($result);
 ?>
