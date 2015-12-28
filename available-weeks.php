@@ -5,7 +5,7 @@
     $weeks = split('<option value="', $weeks);
     
     for ($i = 0; $i < count($weeks); $i++) {
-        $weeks[$i] = substr($weeks[$i], 0, strpos($weeks[$i], '"'));
+        $weeks[$i] = intval(substr($weeks[$i], 0, strpos($weeks[$i], '"')));
     }
 
     // remove first element from the array

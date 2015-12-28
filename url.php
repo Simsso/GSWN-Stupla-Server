@@ -5,12 +5,17 @@
 
     $element_id_str = strval($element_id);
 
-    // add leading zero
+    // add leading zeros to element_id
     while (strlen($element_id_str) < 5) {
         $element_id_str = '0' . $element_id_str;
     }
-
-    $result->url = 'http://stupla.gswn.de/schueler/' . $_GET['week'] . '/c/c' . $element_id_str . '.htm';
+    
+    // add leading zeros to week
+    while (strlen($week) < 2) {
+        $week = '0' . $week;
+    }
+    
+    $result->url = 'http://stupla.gswn.de/schueler/' . $week . '/c/c' . $element_id_str . '.htm';
     $result->success = 1;
     $result->message = "";
     echo json_encode($result);
