@@ -4,6 +4,6 @@
 
     $result->elements = $elements;
     $result->success = 1;
-    $result->message = "";
+    $result->message = "This server has been moved to another hosting company. It will be back online soon.";// "The GSWN website has been updated. We are working on adapting the app to it.";
     echo json_encode($result);
 ?>
