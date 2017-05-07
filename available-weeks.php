@@ -11,6 +11,7 @@
     // remove first element from the array
     array_splice($weeks, 0, 1);
 
+    $result = new stdClass();
     $result->weeks = $weeks;
     $result->success = 1;
     $result->message = "";
